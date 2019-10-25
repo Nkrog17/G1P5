@@ -1,4 +1,5 @@
 sceneSetups:
-- path: Assets/Forest/Forest.unity
-  isLoaded: 1
-  isActive: 1
+- path: Assets/Cabin/Cabinscene.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
