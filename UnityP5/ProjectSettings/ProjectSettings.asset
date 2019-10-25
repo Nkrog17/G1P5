@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: c4df04c6bd97f634cb720a41faf797d2
+  productGUID: d77eba32bcd25ab41b31c3b3f09f4ab1
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -618,9 +618,9 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: c8f05eb5-50f9-4621-9e6a-608223463216
+  cloudProjectId: 05490acd-17bd-4051-8c36-69355119f5ba
   framebufferDepthMemorylessMode: 0
-  projectName: UnityP5
+  projectName: UnityP5 (1)
   organizationId: emilpettersson
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
