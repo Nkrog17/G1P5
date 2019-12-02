@@ -10,7 +10,7 @@ public class ShaderCont : MonoBehaviour
     float amt;
     bool amt1 = false;
     public GameObject[] prop;
-    int[] timerArray = new int[10] { 5, 20, 30, 60, 80, 100, 120, 140, 160, 180 };
+    int[] timerArray = new int[10] {26, 59, 98, 119, 157, 191, 252, 268, 307, 328 };
     public static int counter = 0;
     public static bool setInactive = false;
     public static bool stopCounter = false;
@@ -66,7 +66,7 @@ public class ShaderCont : MonoBehaviour
     {
         prop[i].SetActive(true);
 
-        amt -= 0.02f;
+        amt -= 0.01f;
         mat.SetFloat("_SliceAmount", amt);
         if (amt <= 0)
         {
@@ -77,7 +77,7 @@ public class ShaderCont : MonoBehaviour
 
     void propKill(int i)
     {
-        amt += 0.02f;
+        amt += 0.01f;
         //Ændrer sliceamount i dissolve2nd shaderen.    
         mat.SetFloat("_SliceAmount", amt);
         if (amt >= 1)
