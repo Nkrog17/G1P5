@@ -9,6 +9,8 @@ public class ShaderCont : MonoBehaviour
     //public Renderer rend;
     float amt;
     bool amt1 = false;
+    bool audioStartPlayed = false;
+    bool audioEndPlayed = false;
     public GameObject[] prop;
     public AudioSource AudioStart;
     public AudioSource AudioEnd;
@@ -26,9 +28,9 @@ public class ShaderCont : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         //amt = burneffekt hvor 0 = objekt er visibel og 1 = objekt er brændt væk
         amt = 1;
+
     }
 
 
@@ -55,12 +57,14 @@ public class ShaderCont : MonoBehaviour
         if (timer >= timerArray[counter] && timer < (timerArray[counter] + 7) && !amt1 && gameStart)
         {
             propCall(counter);
-            
+           
         }
 
         if (timer >= (timerArray[counter]+7) && !amt1 && gameStart)
         {
+       
             propKill(counter);
+            
         }
 
         if (counter > rend.Length-1)
@@ -74,7 +78,13 @@ public class ShaderCont : MonoBehaviour
 
     void propCall(int i)
     {
-        //AudioStart.Play(0);'
+        //Makes sure the prop sound only plays once
+        audioEndPlayed = false;
+        if (audioStartPlayed == false) {
+            AudioStart.Play(0);
+            audioStartPlayed = true;
+        }
+        //AudioStart.Play(0);
         if (!amt1)
         {
             prop[i].SetActive(true);
@@ -93,6 +103,12 @@ public class ShaderCont : MonoBehaviour
 
     void propKill(int i)
     {
+        //Makes sure the prop sound only plays once
+        audioStartPlayed = false;
+        if (audioEndPlayed == false) {
+            AudioEnd.Play(0);
+            audioEndPlayed = true;
+        }
         //AudioEnd.Play(0);
         amt += 0.01f;
         //Ændrer sliceamount i dissolve2nd shaderen.    

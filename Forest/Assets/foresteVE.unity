@@ -232,12 +232,6 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 1776471437}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &42799820 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -8626751840527039810, guid: 7e6474cbcc7413540acba90a17a34832,
-    type: 3}
-  m_PrefabInstance: {fileID: 454193923}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &42799822 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5902419001559106108, guid: 7e6474cbcc7413540acba90a17a34832,
@@ -2187,10 +2181,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012539144}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bfdf8b4c035a1af44af690e3c2124f7b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dda82ae5435ea8143bef7ff129071c61, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3750,7 +3744,7 @@ MonoBehaviour:
   - {fileID: 42799822}
   - {fileID: 1542981444}
   - {fileID: 20355882}
-  - {fileID: 42799822}
+  - {fileID: 2109476220}
   - {fileID: 1514336432}
   - {fileID: 742866306}
   - {fileID: 1920928631}
@@ -3761,7 +3755,7 @@ MonoBehaviour:
   - {fileID: 1013482116}
   - {fileID: 1542981442}
   - {fileID: 20355880}
-  - {fileID: 42799820}
+  - {fileID: 1964630701}
   - {fileID: 128247979}
   - {fileID: 742866304}
   - {fileID: 919832817}
@@ -4435,10 +4429,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736365857}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bfdf8b4c035a1af44af690e3c2124f7b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b69c6530353ac094a839fef09a40ff49, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4933,7 +4927,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -5331,6 +5325,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5aed95fff7db1534c808f17d6b98c12a, type: 3}
+--- !u!23 &2109476220 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5902419001559106108, guid: d34505b439225a944b652b28e6b43842,
+    type: 3}
+  m_PrefabInstance: {fileID: 654014083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2134248524
 GameObject:
   m_ObjectHideFlags: 0
