@@ -16,7 +16,7 @@ public class ShaderCont : MonoBehaviour
     float fakeTimer;
 
     // 26, 59, 98, 119, 157, 191, 252, 268, 307, 328
-    int[] timerArray = new int[10] {5, 12, 20, 27, 35, 42, 50, 57, 65, 72 };
+    int[] timerArray = new int[10] {16, 50, 89, 111, 148, 182, 243, 260, 298, 322 };
     public static int counter = 0;
     public static bool setInactive = false;
     public static bool stopCounter = false;
@@ -39,36 +39,28 @@ public class ShaderCont : MonoBehaviour
         if (!setInactive)
         {
             propActiveStatus();
-            
         }
-
-
         //amt = mat.GetFloat("_SliceAmount");
+        //Ændrer space herunder til hvad vi finder ud af med VR.q
         if (Input.GetKeyDown(KeyCode.Space) && !gameStart) {
             fakeTimer = timer;
-            
             Narrative.Play();
             gameStart = true;
         }
         timer = timer - fakeTimer;
         Debug.Log("timer = " + timer); 
-      
-
         mat = rend[counter].material;
+
         //Starts calling function after specified time for each element.
-        if (timer >= timerArray[counter] && timer < (timerArray[counter] + 5) && !amt1 && gameStart)
+        if (timer >= timerArray[counter] && timer < (timerArray[counter] + 7) && !amt1 && gameStart)
         {
-            
             propCall(counter);
             
         }
 
-        if (timer >= (timerArray[counter]+5) && !amt1 && gameStart)
+        if (timer >= (timerArray[counter]+7) && !amt1 && gameStart)
         {
-            
             propKill(counter);
-
-           
         }
 
         if (counter > rend.Length-1)
