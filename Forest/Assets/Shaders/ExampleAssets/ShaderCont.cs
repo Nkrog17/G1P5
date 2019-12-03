@@ -13,6 +13,7 @@ public class ShaderCont : MonoBehaviour
     public AudioSource AudioStart;
     public AudioSource AudioEnd;
     public AudioSource Narrative;
+    float fakeTimer;
 
     // 26, 59, 98, 119, 157, 191, 252, 268, 307, 328
     int[] timerArray = new int[10] {5, 12, 20, 27, 35, 42, 50, 57, 65, 72 };
@@ -34,6 +35,7 @@ public class ShaderCont : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer = Time.time;
         if (!setInactive)
         {
             propActiveStatus();
@@ -43,23 +45,25 @@ public class ShaderCont : MonoBehaviour
 
         //amt = mat.GetFloat("_SliceAmount");
         if (Input.GetKeyDown(KeyCode.Space) && !gameStart) {
-            timer = Time.time;
+            fakeTimer = timer;
+            
             Narrative.Play();
             gameStart = true;
         }
-        //Debug.Log("timer = " + timer); 
+        timer = timer - fakeTimer;
+        Debug.Log("timer = " + timer); 
       
 
         mat = rend[counter].material;
         //Starts calling function after specified time for each element.
-        if (timer >= timerArray[counter] && timer < (timerArray[counter] + 5) && !amt1)
+        if (timer >= timerArray[counter] && timer < (timerArray[counter] + 5) && !amt1 && gameStart)
         {
             
             propCall(counter);
             
         }
 
-        if (timer >= (timerArray[counter]+5) && !amt1)
+        if (timer >= (timerArray[counter]+5) && !amt1 && gameStart)
         {
             
             propKill(counter);

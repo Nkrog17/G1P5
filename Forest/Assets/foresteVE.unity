@@ -976,6 +976,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: frame (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9101430577481724397, guid: 426e4eac548f91a44bd0a5a5bf231330,
+        type: 3}
+      propertyPath: m_Name
+      value: Frame
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 426e4eac548f91a44bd0a5a5bf231330,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1055,11 +1060,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.037
-      objectReference: {fileID: 0}
-    - target: {fileID: 9101430577481724397, guid: 426e4eac548f91a44bd0a5a5bf231330,
-        type: 3}
-      propertyPath: m_Name
-      value: Frame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 426e4eac548f91a44bd0a5a5bf231330, type: 3}
@@ -1540,7 +1540,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 10bb46a1c8215124788f693a8fd3e4f1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 65.432
+      value: 65.34
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 10bb46a1c8215124788f693a8fd3e4f1,
         type: 3}
@@ -1585,17 +1585,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 10bb46a1c8215124788f693a8fd3e4f1,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 123.50181
+      value: 11.11002
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 10bb46a1c8215124788f693a8fd3e4f1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.0066009
+      value: 0.1805105
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 10bb46a1c8215124788f693a8fd3e4f1,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 123.50181
+      value: 11.11002
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 10bb46a1c8215124788f693a8fd3e4f1,
         type: 3}
