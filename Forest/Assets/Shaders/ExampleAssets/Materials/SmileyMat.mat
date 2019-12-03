@@ -24,7 +24,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BurnRamp:
-        m_Texture: {fileID: 2800000, guid: 7a456b521079c114cb25ec36412fc54c, type: 3}
+        m_Texture: {fileID: 2800000, guid: d7c0473169b813a43abd3ac709e21a70, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7a456b521079c114cb25ec36412fc54c, type: 3}
+        m_Texture: {fileID: 2800000, guid: d7c0473169b813a43abd3ac709e21a70, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SliceGuide:
-        m_Texture: {fileID: 2800000, guid: 7a456b521079c114cb25ec36412fc54c, type: 3}
+        m_Texture: {fileID: 2800000, guid: d7c0473169b813a43abd3ac709e21a70, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
