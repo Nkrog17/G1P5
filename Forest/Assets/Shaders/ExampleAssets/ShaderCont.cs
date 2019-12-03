@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShaderCont : MonoBehaviour
 {
-    float timer;
+    float timer = 0.0f;
     public Renderer[] rend;
     //public Renderer rend;
     float amt;
@@ -12,12 +12,14 @@ public class ShaderCont : MonoBehaviour
     public GameObject[] prop;
     public AudioSource AudioStart;
     public AudioSource AudioEnd;
+    public AudioSource Narrative;
+
     // 26, 59, 98, 119, 157, 191, 252, 268, 307, 328
     int[] timerArray = new int[10] {5, 12, 20, 27, 35, 42, 50, 57, 65, 72 };
     public static int counter = 0;
     public static bool setInactive = false;
     public static bool stopCounter = false;
-
+    bool gameStart = false;
     Material mat;
     
     // Start is called before the first frame update
@@ -38,10 +40,13 @@ public class ShaderCont : MonoBehaviour
             
         }
 
-   
-        //amt = mat.GetFloat("_SliceAmount");
-        timer = Time.time;
 
+        //amt = mat.GetFloat("_SliceAmount");
+        if (Input.GetKeyDown(KeyCode.Space) && !gameStart) {
+            timer = Time.time;
+            Narrative.Play();
+            gameStart = true;
+        }
         //Debug.Log("timer = " + timer); 
       
 
@@ -77,7 +82,7 @@ public class ShaderCont : MonoBehaviour
         if (!amt1)
         {
             prop[i].SetActive(true);
-            Debug.Log("i = " + i);
+            //Debug.Log("i = " + i);
         }
         
         //Debug.Log(amt);
@@ -106,7 +111,7 @@ public class ShaderCont : MonoBehaviour
                counter++;
             }
            
-            Debug.Log("Counter is = " + counter);
+            //Debug.Log("Counter is = " + counter);
         }
     }
     void propActiveStatus()
