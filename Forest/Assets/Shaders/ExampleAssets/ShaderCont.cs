@@ -37,6 +37,7 @@ public class ShaderCont : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        OVRInput.Update();
         timer = Time.time;
         if (!setInactive)
         {
@@ -44,7 +45,14 @@ public class ShaderCont : MonoBehaviour
         }
         //amt = mat.GetFloat("_SliceAmount");
         //Ændrer space herunder til hvad vi finder ud af med VR.q
-        if (Input.GetKeyDown(KeyCode.Space) && !gameStart) {
+        if(OVRInput.Get(OVRInput.Button.PrimaryHandTrigger) && !gameStart)
+        {
+
+            fakeTimer = timer;
+            Narrative.Play();
+            gameStart = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && !gameStart) {
             fakeTimer = timer;
             Narrative.Play();
             gameStart = true;
