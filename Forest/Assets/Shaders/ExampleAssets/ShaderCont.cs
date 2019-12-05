@@ -52,10 +52,21 @@ public class ShaderCont : MonoBehaviour
             Narrative.Play();
             gameStart = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && !gameStart) {
-            fakeTimer = timer;
+        else if (OVRInput.Get(OVRInput.Button.SecondaryHandTrigger) && !gameStart)
+        {
+
+            //fakeTimer = timer;
             Narrative.Play();
             gameStart = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && !gameStart) {
+            //fakeTimer = timer;
+            Narrative.Play();
+            gameStart = true;
+            /*
+            fakeTimer = timer;
+            Narrative.Play();
+            gameStart = true;*/
         }
         timer = timer - fakeTimer;
         Debug.Log("timer = " + timer); 
