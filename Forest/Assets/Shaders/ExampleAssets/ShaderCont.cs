@@ -18,7 +18,7 @@ public class ShaderCont : MonoBehaviour
     float fakeTimer;
 
     // 26, 59, 98, 119, 157, 191, 252, 268, 307, 328
-    int[] timerArray = new int[10] {16, 50, 89, 111, 148, 182, 243, 260, 298, 322 };
+    int[] timerArray = new int[15] {16, 50, 89, 111, 148, 182, 243, 260, 298, 322, 342, 362, 382, 402, 420};
     public static int counter = 0;
     public static bool setInactive = false;
     public static bool stopCounter = false;
@@ -63,13 +63,14 @@ public class ShaderCont : MonoBehaviour
             //fakeTimer = timer;
             Narrative.Play();
             gameStart = true;
+            Debug.Log("ay lmao");
             /*
             fakeTimer = timer;
             Narrative.Play();
             gameStart = true;*/
         }
         timer = timer - fakeTimer;
-        Debug.Log("timer = " + timer); 
+       // Debug.Log("timer = " + timer); 
         mat = rend[counter].material;
 
         //Starts calling function after specified time for each element.
@@ -102,6 +103,7 @@ public class ShaderCont : MonoBehaviour
         if (audioStartPlayed == false) {
             AudioStart.Play(0);
             audioStartPlayed = true;
+            Debug.Log("hello");
         }
         //AudioStart.Play(0);
         if (!amt1)
