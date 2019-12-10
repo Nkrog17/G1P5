@@ -18,7 +18,7 @@ public class ShaderCont : MonoBehaviour
     float fakeTimer;
 
     // 26, 59, 98, 119, 157, 191, 252, 268, 307, 328
-    int[] timerArray = new int[15] {16, 50, 89, 111, 148, 182, 243, 260, 298, 322, 342, 362, 382, 402, 420};
+    int[] timerArray = new int[16] {15, 47, 66, 82, 108, 125, 157, 188, 230, 254, 269, 299, 320, 337, 361, 388};
     public static int counter = 0;
     public static bool setInactive = false;
     public static bool stopCounter = false;
@@ -60,14 +60,9 @@ public class ShaderCont : MonoBehaviour
             gameStart = true;
         }
         else if (Input.GetKeyDown(KeyCode.Space) && !gameStart) {
-            //fakeTimer = timer;
-            Narrative.Play();
-            gameStart = true;
-            Debug.Log("ay lmao");
-            /*
             fakeTimer = timer;
             Narrative.Play();
-            gameStart = true;*/
+            gameStart = true;
         }
         timer = timer - fakeTimer;
        // Debug.Log("timer = " + timer); 
